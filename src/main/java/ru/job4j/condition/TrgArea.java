@@ -3,11 +3,7 @@ package ru.job4j.condition;
 public class TrgArea {
     public static double area(double a, double b, double c) {
         double p = (a + b + c) / 2;
-        double first = p - a;
-        double second = p - b;
-        double third = p - c;
-        double fourth = p * first * second * third;
-        double s = Math.sqrt(fourth);
+        double s = Math.sqrt(p * (p - a) * (p - b) * (p - c));
         return s;
     }
 
